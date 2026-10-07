@@ -1,0 +1,33 @@
+Problem
+_________________________________________________________________________________________________________________
+You are designing a database for a movie ticket booking platform (like BookMyShow or Fandango). Create a schema to manage cinemas, showtimes, seat inventory, and bookings.
+
+Business Context
+_________________________________________________________________________________________________________________
+
+Movie booking platforms must manage complex seat inventories, concurrent bookings, and revenue. Key business questions:
+
+How many seats are available for a specific showtime?
+Which movies are selling out fastest?
+What is the revenue for each cinema?
+Can we hold a seat for 10 minutes during checkout?
+What is our occupancy rate by cinema and movie?
+
+
+Requirements
+_________________________________________________________________________________________________________________
+
+Design schema for cinemas, screens, and seat layouts
+Manage movie showtimes with pricing
+Track seat inventory with different seat types
+Support multi-seat bookings in a single transaction
+Enable occupancy and revenue reporting
+
+
+Constraints
+_________________________________________________________________________________________________________________
+
+Large chain: 500+ cinemas, 5,000 screens
+Peak booking: 10K transactions/hour during movie releases
+Seat holds: 10-15 minute expiration
+Real-time seat availability critical
