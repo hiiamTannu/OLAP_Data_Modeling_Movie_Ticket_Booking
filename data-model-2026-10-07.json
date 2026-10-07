@@ -1,0 +1,1320 @@
+{
+  "tables": [
+    {
+      "id": "table-id-1791363606147-fu0z99azy",
+      "name": "cinema",
+      "fields": [
+        {
+          "id": "field-id-1791363606147-jhdoumpeq",
+          "name": "cinema_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791363626656",
+          "name": "name ",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363668839",
+          "name": "city",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363674440",
+          "name": "address",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363699361",
+          "name": "timezone",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791363828778-b9ly1rezv",
+      "name": "screens",
+      "fields": [
+        {
+          "id": "field-id-1791363828778-6im31wx1i",
+          "name": "screen_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791363845209",
+          "name": "screen_name",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363943127",
+          "name": "total_seat",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363960516",
+          "name": "screen_type",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791363976321",
+          "name": "cinema_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791363606147-fu0z99azy",
+            "fieldId": "field-id-1791363606147-jhdoumpeq"
+          }
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791364129567-zdixnjp35",
+      "name": "seat_master",
+      "fields": [
+        {
+          "id": "field-id-1791364129567-j44v96uru",
+          "name": "seat_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791364162294",
+          "name": "screen_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791363828778-b9ly1rezv",
+            "fieldId": "field-id-1791363828778-6im31wx1i"
+          }
+        },
+        {
+          "id": "field-1791364206363",
+          "name": "row_label",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791364179622",
+          "name": "seat_type",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364187213",
+          "name": "seat_number",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": true
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791364343084-2lm0trrua",
+      "name": "movies",
+      "fields": [
+        {
+          "id": "field-id-1791364343084-x9p6nvghc",
+          "name": "movie_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791364366406",
+          "name": "title",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364376919",
+          "name": "genre",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364413545",
+          "name": "duration_minutes",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364448730",
+          "name": "rating",
+          "type": "DECIMAL",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364461303",
+          "name": "release_date",
+          "type": "DATE",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791364519987-dx2qszsdl",
+      "name": "show_time",
+      "fields": [
+        {
+          "id": "field-id-1791364519987-o5uglmjmm",
+          "name": "show_time_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791364568963",
+          "name": "movie_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791364343084-2lm0trrua",
+            "fieldId": "field-id-1791364343084-x9p6nvghc"
+          }
+        },
+        {
+          "id": "field-1791364622024",
+          "name": "screen_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791363828778-b9ly1rezv",
+            "fieldId": "field-id-1791363828778-6im31wx1i"
+          }
+        },
+        {
+          "id": "field-1791364667171",
+          "name": "start_time",
+          "type": "TIMESTAMP",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364680109",
+          "name": "end_time",
+          "type": "TIMESTAMP",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364706839",
+          "name": "base_price",
+          "type": "DECIMAL",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791364803216-66pc5b6ak",
+      "name": "show_seats",
+      "fields": [
+        {
+          "id": "field-id-1791364803216-ko6zg0xjv",
+          "name": "show_seat_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791364842719",
+          "name": "seat_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": true,
+          "foreignKey": {
+            "tableId": "table-id-1791364129567-zdixnjp35",
+            "fieldId": "field-id-1791364129567-j44v96uru"
+          }
+        },
+        {
+          "id": "field-1791364872730",
+          "name": "show_time_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791364519987-dx2qszsdl",
+            "fieldId": "field-id-1791364519987-o5uglmjmm"
+          }
+        },
+        {
+          "id": "field-1791364936979",
+          "name": "price",
+          "type": "DECIMAL",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364944932",
+          "name": "status",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364954464",
+          "name": "held_by_user",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791364971927",
+          "name": "hold_expires_at",
+          "type": "TIMESTAMP",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791365091568-47r7vpjj8",
+      "name": "bookings",
+      "fields": [
+        {
+          "id": "field-id-1791365091568-xub84y6zt",
+          "name": "booking_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791365110010",
+          "name": "user_id",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365126360",
+          "name": "show_time_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791364519987-dx2qszsdl",
+            "fieldId": "field-id-1791364519987-o5uglmjmm"
+          }
+        },
+        {
+          "id": "field-1791365154121",
+          "name": "total_amount",
+          "type": "DECIMAL",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365163013",
+          "name": "booking_status",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365170533",
+          "name": "booked_at",
+          "type": "TIMESTAMP",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    },
+    {
+      "id": "table-id-1791365253305-dgj5nfyrc",
+      "name": "payments",
+      "fields": [
+        {
+          "id": "field-id-1791365253305-6iqnsr8aa",
+          "name": "payment_id",
+          "type": "INT",
+          "isPrimary": true,
+          "isNullable": false,
+          "isUnique": true
+        },
+        {
+          "id": "field-1791365284850",
+          "name": "booking_id",
+          "type": "INT",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false,
+          "foreignKey": {
+            "tableId": "table-id-1791365091568-47r7vpjj8",
+            "fieldId": "field-id-1791365091568-xub84y6zt"
+          }
+        },
+        {
+          "id": "field-1791365334425",
+          "name": "payment_gateway",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365346024",
+          "name": "payment_mode",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365364452",
+          "name": "payment_status",
+          "type": "VARCHAR(255)",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365371522",
+          "name": "amount",
+          "type": "DECIMAL",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        },
+        {
+          "id": "field-1791365386933",
+          "name": "payment_done_at",
+          "type": "TIMESTAMP",
+          "isPrimary": false,
+          "isNullable": false,
+          "isUnique": false
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "id-1791363988017-z0mm32hz8",
+      "name": "cinema.cinema_id → screens.cinema_id",
+      "sourceTableId": "table-id-1791363606147-fu0z99azy",
+      "sourceFieldId": "field-id-1791363606147-jhdoumpeq",
+      "targetTableId": "table-id-1791363828778-b9ly1rezv",
+      "targetFieldId": "field-1791363976321",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791364293209-yvq3397gc",
+      "name": "screens.screen_id → seat_master.screen_id",
+      "sourceTableId": "table-id-1791363828778-b9ly1rezv",
+      "sourceFieldId": "field-id-1791363828778-6im31wx1i",
+      "targetTableId": "table-id-1791364129567-zdixnjp35",
+      "targetFieldId": "field-1791364162294",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791364579377-3k944vo3i",
+      "name": "movies.movie_id → show_time.movie_id",
+      "sourceTableId": "table-id-1791364343084-2lm0trrua",
+      "sourceFieldId": "field-id-1791364343084-x9p6nvghc",
+      "targetTableId": "table-id-1791364519987-dx2qszsdl",
+      "targetFieldId": "field-1791364568963",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791364635194-6nwtb0usa",
+      "name": "screens.screen_id → show_time.screen_id",
+      "sourceTableId": "table-id-1791363828778-b9ly1rezv",
+      "sourceFieldId": "field-id-1791363828778-6im31wx1i",
+      "targetTableId": "table-id-1791364519987-dx2qszsdl",
+      "targetFieldId": "field-1791364622024",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791365020739-szuqc2t9c",
+      "name": "seat_master.seat_id → show_seats.seat_id",
+      "sourceTableId": "table-id-1791364129567-zdixnjp35",
+      "sourceFieldId": "field-id-1791364129567-j44v96uru",
+      "targetTableId": "table-id-1791364803216-66pc5b6ak",
+      "targetFieldId": "field-1791364842719",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791365048297-ix4l11k08",
+      "name": "show_time.show_time_id → show_seats.show_time_id",
+      "sourceTableId": "table-id-1791364519987-dx2qszsdl",
+      "sourceFieldId": "field-id-1791364519987-o5uglmjmm",
+      "targetTableId": "table-id-1791364803216-66pc5b6ak",
+      "targetFieldId": "field-1791364872730",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791365202591-qox3gixoa",
+      "name": "show_time.show_time_id → bookings.show_time_id",
+      "sourceTableId": "table-id-1791364519987-dx2qszsdl",
+      "sourceFieldId": "field-id-1791364519987-o5uglmjmm",
+      "targetTableId": "table-id-1791365091568-47r7vpjj8",
+      "targetFieldId": "field-1791365126360",
+      "type": "one-to-many"
+    },
+    {
+      "id": "id-1791365305336-ufxukqwjf",
+      "name": "bookings.booking_id → payments.booking_id",
+      "sourceTableId": "table-id-1791365091568-47r7vpjj8",
+      "sourceFieldId": "field-id-1791365091568-xub84y6zt",
+      "targetTableId": "table-id-1791365253305-dgj5nfyrc",
+      "targetFieldId": "field-1791365284850",
+      "type": "one-to-many"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "table-id-1791363606147-fu0z99azy",
+      "type": "tableNode",
+      "position": {
+        "x": 0,
+        "y": 28
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791363606147-fu0z99azy",
+          "name": "cinema",
+          "fields": [
+            {
+              "id": "field-id-1791363606147-jhdoumpeq",
+              "name": "cinema_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791363626656",
+              "name": "name ",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363668839",
+              "name": "city",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363674440",
+              "name": "address",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363699361",
+              "name": "timezone",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 253,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -380,
+        "y": 420
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791363828778-b9ly1rezv",
+      "type": "tableNode",
+      "position": {
+        "x": 380,
+        "y": 28
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791363828778-b9ly1rezv",
+          "name": "screens",
+          "fields": [
+            {
+              "id": "field-id-1791363828778-6im31wx1i",
+              "name": "screen_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791363845209",
+              "name": "screen_name",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363943127",
+              "name": "total_seat",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363960516",
+              "name": "screen_type",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791363976321",
+              "name": "cinema_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 253,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 20,
+        "y": 520
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791364129567-zdixnjp35",
+      "type": "tableNode",
+      "position": {
+        "x": 760,
+        "y": 18
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791364129567-zdixnjp35",
+          "name": "seat_master",
+          "fields": [
+            {
+              "id": "field-id-1791364129567-j44v96uru",
+              "name": "seat_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364162294",
+              "name": "screen_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364206363",
+              "name": "row_label",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364179622",
+              "name": "seat_type",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364187213",
+              "name": "seat_number",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": true
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 253,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 420,
+        "y": 300
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791364343084-2lm0trrua",
+      "type": "tableNode",
+      "position": {
+        "x": 380,
+        "y": 332
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791364343084-2lm0trrua",
+          "name": "movies",
+          "fields": [
+            {
+              "id": "field-id-1791364343084-x9p6nvghc",
+              "name": "movie_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364366406",
+              "name": "title",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364376919",
+              "name": "genre",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364413545",
+              "name": "duration_minutes",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364448730",
+              "name": "rating",
+              "type": "DECIMAL",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364461303",
+              "name": "release_date",
+              "type": "DATE",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 289,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 80,
+        "y": 1020
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791364519987-dx2qszsdl",
+      "type": "tableNode",
+      "position": {
+        "x": 760,
+        "y": 322
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791364519987-dx2qszsdl",
+          "name": "show_time",
+          "fields": [
+            {
+              "id": "field-id-1791364519987-o5uglmjmm",
+              "name": "show_time_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364568963",
+              "name": "movie_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false,
+              "foreignKey": {
+                "tableId": "table-id-1791364343084-2lm0trrua",
+                "fieldId": "field-id-1791364343084-x9p6nvghc"
+              }
+            },
+            {
+              "id": "field-1791364622024",
+              "name": "screen_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false,
+              "foreignKey": {
+                "tableId": "table-id-1791363828778-b9ly1rezv",
+                "fieldId": "field-id-1791363828778-6im31wx1i"
+              }
+            },
+            {
+              "id": "field-1791364667171",
+              "name": "start_time",
+              "type": "TIMESTAMP",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364680109",
+              "name": "end_time",
+              "type": "TIMESTAMP",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364706839",
+              "name": "base_price",
+              "type": "DECIMAL",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 289,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 500,
+        "y": 720
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791364803216-66pc5b6ak",
+      "type": "tableNode",
+      "position": {
+        "x": 1140,
+        "y": 0
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791364803216-66pc5b6ak",
+          "name": "show_seats",
+          "fields": [
+            {
+              "id": "field-id-1791364803216-ko6zg0xjv",
+              "name": "show_seat_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364842719",
+              "name": "seat_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791364872730",
+              "name": "show_time_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364936979",
+              "name": "price",
+              "type": "DECIMAL",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364944932",
+              "name": "status",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364954464",
+              "name": "held_by_user",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791364971927",
+              "name": "hold_expires_at",
+              "type": "TIMESTAMP",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 324,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1120,
+        "y": 400
+      },
+      "dragging": false
+    },
+    {
+      "id": "table-id-1791365091568-47r7vpjj8",
+      "type": "tableNode",
+      "position": {
+        "x": 1140,
+        "y": 336
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791365091568-47r7vpjj8",
+          "name": "bookings",
+          "fields": [
+            {
+              "id": "field-id-1791365091568-xub84y6zt",
+              "name": "booking_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791365110010",
+              "name": "user_id",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365126360",
+              "name": "show_time_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false,
+              "foreignKey": {
+                "tableId": "table-id-1791364519987-dx2qszsdl",
+                "fieldId": "field-id-1791364519987-o5uglmjmm"
+              }
+            },
+            {
+              "id": "field-1791365154121",
+              "name": "total_amount",
+              "type": "DECIMAL",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365163013",
+              "name": "booking_status",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365170533",
+              "name": "booked_at",
+              "type": "TIMESTAMP",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 289
+    },
+    {
+      "id": "table-id-1791365253305-dgj5nfyrc",
+      "type": "tableNode",
+      "position": {
+        "x": 1520,
+        "y": 322
+      },
+      "data": {
+        "table": {
+          "id": "table-id-1791365253305-dgj5nfyrc",
+          "name": "payments",
+          "fields": [
+            {
+              "id": "field-id-1791365253305-6iqnsr8aa",
+              "name": "payment_id",
+              "type": "INT",
+              "isPrimary": true,
+              "isNullable": false,
+              "isUnique": true
+            },
+            {
+              "id": "field-1791365284850",
+              "name": "booking_id",
+              "type": "INT",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false,
+              "foreignKey": {
+                "tableId": "table-id-1791365091568-47r7vpjj8",
+                "fieldId": "field-id-1791365091568-xub84y6zt"
+              }
+            },
+            {
+              "id": "field-1791365334425",
+              "name": "payment_gateway",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365346024",
+              "name": "payment_mode",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365364452",
+              "name": "payment_status",
+              "type": "VARCHAR(255)",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365371522",
+              "name": "amount",
+              "type": "DECIMAL",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            },
+            {
+              "id": "field-1791365386933",
+              "name": "payment_done_at",
+              "type": "TIMESTAMP",
+              "isPrimary": false,
+              "isNullable": false,
+              "isUnique": false
+            }
+          ]
+        }
+      },
+      "width": 260,
+      "height": 324
+    }
+  ],
+  "edges": [
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791363606147-fu0z99azy",
+      "sourceHandle": "field-id-1791363606147-jhdoumpeq-source",
+      "target": "table-id-1791363828778-b9ly1rezv",
+      "targetHandle": "field-1791363976321-target",
+      "id": "edge-id-1791363988017-z0mm32hz8",
+      "data": {
+        "relationship": {
+          "id": "id-1791363988017-z0mm32hz8",
+          "name": "cinema.cinema_id → screens.cinema_id",
+          "sourceTableId": "table-id-1791363606147-fu0z99azy",
+          "sourceFieldId": "field-id-1791363606147-jhdoumpeq",
+          "targetTableId": "table-id-1791363828778-b9ly1rezv",
+          "targetFieldId": "field-1791363976321",
+          "type": "one-to-many"
+        }
+      },
+      "selected": false
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791363828778-b9ly1rezv",
+      "sourceHandle": "field-id-1791363828778-6im31wx1i-source",
+      "target": "table-id-1791364129567-zdixnjp35",
+      "targetHandle": "field-1791364162294-target",
+      "id": "edge-id-1791364293209-yvq3397gc",
+      "data": {
+        "relationship": {
+          "id": "id-1791364293209-yvq3397gc",
+          "name": "screens.screen_id → seat_master.screen_id",
+          "sourceTableId": "table-id-1791363828778-b9ly1rezv",
+          "sourceFieldId": "field-id-1791363828778-6im31wx1i",
+          "targetTableId": "table-id-1791364129567-zdixnjp35",
+          "targetFieldId": "field-1791364162294",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791364343084-2lm0trrua",
+      "sourceHandle": "field-id-1791364343084-x9p6nvghc-source",
+      "target": "table-id-1791364519987-dx2qszsdl",
+      "targetHandle": "field-1791364568963-target",
+      "id": "edge-id-1791364579377-3k944vo3i",
+      "data": {
+        "relationship": {
+          "id": "id-1791364579377-3k944vo3i",
+          "name": "movies.movie_id → show_time.movie_id",
+          "sourceTableId": "table-id-1791364343084-2lm0trrua",
+          "sourceFieldId": "field-id-1791364343084-x9p6nvghc",
+          "targetTableId": "table-id-1791364519987-dx2qszsdl",
+          "targetFieldId": "field-1791364568963",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791363828778-b9ly1rezv",
+      "sourceHandle": "field-id-1791363828778-6im31wx1i-source",
+      "target": "table-id-1791364519987-dx2qszsdl",
+      "targetHandle": "field-1791364622024-target",
+      "id": "edge-id-1791364635194-6nwtb0usa",
+      "data": {
+        "relationship": {
+          "id": "id-1791364635194-6nwtb0usa",
+          "name": "screens.screen_id → show_time.screen_id",
+          "sourceTableId": "table-id-1791363828778-b9ly1rezv",
+          "sourceFieldId": "field-id-1791363828778-6im31wx1i",
+          "targetTableId": "table-id-1791364519987-dx2qszsdl",
+          "targetFieldId": "field-1791364622024",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791364129567-zdixnjp35",
+      "sourceHandle": "field-id-1791364129567-j44v96uru-source",
+      "target": "table-id-1791364803216-66pc5b6ak",
+      "targetHandle": "field-1791364842719-target",
+      "id": "edge-id-1791365020739-szuqc2t9c",
+      "data": {
+        "relationship": {
+          "id": "id-1791365020739-szuqc2t9c",
+          "name": "seat_master.seat_id → show_seats.seat_id",
+          "sourceTableId": "table-id-1791364129567-zdixnjp35",
+          "sourceFieldId": "field-id-1791364129567-j44v96uru",
+          "targetTableId": "table-id-1791364803216-66pc5b6ak",
+          "targetFieldId": "field-1791364842719",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791364519987-dx2qszsdl",
+      "sourceHandle": "field-id-1791364519987-o5uglmjmm-source",
+      "target": "table-id-1791364803216-66pc5b6ak",
+      "targetHandle": "field-1791364872730-target",
+      "id": "edge-id-1791365048297-ix4l11k08",
+      "data": {
+        "relationship": {
+          "id": "id-1791365048297-ix4l11k08",
+          "name": "show_time.show_time_id → show_seats.show_time_id",
+          "sourceTableId": "table-id-1791364519987-dx2qszsdl",
+          "sourceFieldId": "field-id-1791364519987-o5uglmjmm",
+          "targetTableId": "table-id-1791364803216-66pc5b6ak",
+          "targetFieldId": "field-1791364872730",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      },
+      "selected": false
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791364519987-dx2qszsdl",
+      "sourceHandle": "field-id-1791364519987-o5uglmjmm-source",
+      "target": "table-id-1791365091568-47r7vpjj8",
+      "targetHandle": "field-1791365126360-target",
+      "id": "edge-id-1791365202591-qox3gixoa",
+      "data": {
+        "relationship": {
+          "id": "id-1791365202591-qox3gixoa",
+          "name": "show_time.show_time_id → bookings.show_time_id",
+          "sourceTableId": "table-id-1791364519987-dx2qszsdl",
+          "sourceFieldId": "field-id-1791364519987-o5uglmjmm",
+          "targetTableId": "table-id-1791365091568-47r7vpjj8",
+          "targetFieldId": "field-1791365126360",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    },
+    {
+      "type": "relationship",
+      "animated": false,
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "#2563EB"
+      },
+      "source": "table-id-1791365091568-47r7vpjj8",
+      "sourceHandle": "field-id-1791365091568-xub84y6zt-source",
+      "target": "table-id-1791365253305-dgj5nfyrc",
+      "targetHandle": "field-1791365284850-target",
+      "id": "edge-id-1791365305336-ufxukqwjf",
+      "data": {
+        "relationship": {
+          "id": "id-1791365305336-ufxukqwjf",
+          "name": "bookings.booking_id → payments.booking_id",
+          "sourceTableId": "table-id-1791365091568-47r7vpjj8",
+          "sourceFieldId": "field-id-1791365091568-xub84y6zt",
+          "targetTableId": "table-id-1791365253305-dgj5nfyrc",
+          "targetFieldId": "field-1791365284850",
+          "type": "one-to-many"
+        },
+        "showCardinality": true,
+        "showRelationshipText": true
+      }
+    }
+  ],
+  "timestamp": 1791365668537,
+  "version": "1.0"
+}
